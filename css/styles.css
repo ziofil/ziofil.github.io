@@ -1,17 +1,7 @@
-body {
-  font-family: sans-serif;
-  padding: 20px;
-  max-width: 800px;
+html {
+  max-width: 70ch;
+  padding: 3em 1em;
   margin: auto;
+  line-height: 1.75;
+  font-size: 1.25em;
 }
-
-h1, h2 {
-  text-align: center;
-}
-
-.post {
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  padding: 20px;
-}
-
