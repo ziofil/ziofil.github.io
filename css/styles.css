@@ -1,7 +1,17 @@
+/* styles.css */
+
 html {
   max-width: 70ch;
   padding: 3em 1em;
   margin: auto;
   line-height: 1.75;
   font-size: 1.25em;
+}
+
+.post h2.expanded + p {
+  display: block;
+}
+
+.post h2:not(.expanded) + p {
+  display: none;
 }
