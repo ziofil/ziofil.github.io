@@ -7,11 +7,3 @@ html {
   line-height: 1.75;
   font-size: 1.25em;
 }
-
-.post h2.expanded + p {
-  display: block;
-}
-
-.post h2:not(.expanded) + p {
-  display: none;
-}
