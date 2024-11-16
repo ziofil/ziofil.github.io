@@ -48,12 +48,17 @@ async function fetchAndParseMarkdown(file) {
     return parseMarkdown(markdown);
 }
 
+async function fetchMarkdownFiles() {
+    const response = await fetch('posts.json'); // Fetch the JSON file
+    return response.json();
+}
+
 async function loadPosts() {
     const postLinksDiv = document.getElementById('post-links');
-    const posts = ['markdown_test']; // replace with your actual posts
+    const posts = await fetchMarkdownFiles(); // Fetch the list of markdown files
 
     for (const post of posts) {
-        const postHtml = await fetchAndParseMarkdown(`posts/${post}.md`);
+        const postHtml = await fetchAndParseMarkdown(`posts/${post}`);
         
         // Create a link for each post
         const link = document.createElement('a');
