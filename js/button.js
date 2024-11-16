@@ -15,6 +15,12 @@ const posts = [
 const currentPage = window.location.pathname.split('/').pop();
 let currentIndex = posts.indexOf(currentPage);
 
+// Ensure currentIndex is set correctly
+if (currentIndex === -1) {
+  console.error(`Current page ${currentPage} not found in posts array.`);
+  currentIndex = 0; // Default to the first post if not found
+}
+
 document.getElementById('back-button').addEventListener('click', () => {
   window.location.href = '../index.html';
 });
