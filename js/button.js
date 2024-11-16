@@ -21,20 +21,20 @@ if (currentIndex === -1) {
   currentIndex = 0; // Default to the first post if not found
 }
 
-document.getElementById('back-button').addEventListener('click', () => {
-  window.location.href = 'index.html';
+document.getElementById('home-button').addEventListener('click', () => {
+  window.location.href = '../index.html';
 });
 
 document.getElementById('prev-button').addEventListener('click', () => {
   if (currentIndex > 0) {
     currentIndex--;
-    window.location.href = `posts/${posts[currentIndex]}`;
+    window.location.href = `../posts/${posts[currentIndex]}`;
   }
 });
 
 document.getElementById('next-button').addEventListener('click', () => {
   if (currentIndex < posts.length - 1) {
     currentIndex++;
-    window.location.href = `posts/${posts[currentIndex]}`;
+    window.location.href = `../posts/${posts[currentIndex]}`;
   }
 });
