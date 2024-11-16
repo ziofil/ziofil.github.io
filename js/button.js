@@ -28,13 +28,13 @@ document.getElementById('back-button').addEventListener('click', () => {
 document.getElementById('prev-button').addEventListener('click', () => {
   if (currentIndex > 0) {
     currentIndex--;
-    window.location.href = `../${posts[currentIndex]}`;
+    window.location.href = `../posts/${posts[currentIndex]}`;
   }
 });
 
 document.getElementById('next-button').addEventListener('click', () => {
   if (currentIndex < posts.length - 1) {
     currentIndex++;
-    window.location.href = `../${posts[currentIndex]}`;
+    window.location.href = `../posts/${posts[currentIndex]}`;
   }
 });
