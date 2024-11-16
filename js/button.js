@@ -4,11 +4,11 @@ const posts = [
   "post1.html",
   "post2.html",
   "post3.html",
+  "post4.html",
   "post5.html",
   "post6.html",
   "post7.html",
-  "post8.html",
-  "post9.html"
+  "post8.html"
 ];
 
 // Determine the current index based on the current page URL
