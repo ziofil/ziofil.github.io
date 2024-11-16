@@ -58,13 +58,13 @@ async function loadPosts() {
     const posts = await fetchMarkdownFiles(); // Fetch the list of markdown files
 
     for (const post of posts) {
-        const postHtml = await fetchAndParseMarkdown(`posts/${post}`);
+        // Assuming the HTML files are named the same as the markdown files but with .html extension
+        const postHtmlFile = post.replace('.md', '.html');
         
         // Create a link for each post
         const link = document.createElement('a');
-        link.href = `#${post}`; // Use hash to identify the post
-        link.innerHTML = postHtml.split('\n')[0]; // Use the first line of the post as the link text
-        link.onclick = () => displayPost(postHtml); // Set onclick to display the post
+        link.href = `posts/${postHtmlFile}`; // Link to the HTML file
+        link.innerHTML = post.split('.')[0]; // Use the file name (without extension) as the link text
         postLinksDiv.appendChild(link);
     }
 }
