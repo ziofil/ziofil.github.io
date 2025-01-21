@@ -26,47 +26,73 @@ a:visited {
 }
 
 /* Dark mode styles */
-body.dark-mode {
-  background-color: #222222;
-  color: #ffffff;
+html.dark-mode,
+html.dark-mode body {
+  background-color: #222222 !important;
+  color: #ffffff !important;
 }
 
-body.dark-mode a {
+html.dark-mode a {
   color: #8ab4f8;
 }
 
-body.dark-mode a:visited {
+html.dark-mode a:visited {
   color: #c58af9;
+}
+
+html.dark-mode .dark-mode-toggle {
+  color: #ffd700;
+}
+
+html.dark-mode .dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Dark mode toggle button */
 .dark-mode-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin-left: 1rem;
+  padding: 0;
   font-size: 1.5rem;
   background: none;
-  border: 1px solid transparent;
+  border: none;
   cursor: pointer;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   transition: all 0.3s ease;
-  z-index: 1000;
+  line-height: 1;
 }
 
+/* Only show effects on hover */
 .dark-mode-toggle:hover {
+  border: 1px solid currentColor;
   background-color: rgba(0, 0, 0, 0.1);
-  border-color: currentColor;
 }
 
-body.dark-mode .dark-mode-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+body.dark-mode .dark-mode-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
-/* Accessibility improvements */
+/* Remove default focus outline */
 .dark-mode-toggle:focus {
   outline: none;
-  box-shadow: 0 0 0 2px currentColor;
+  box-shadow: none;
+}
+
+/* Add a container class for the header area */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Adjust h1 margin for the new layout */
+h1 {
+  margin: 0;
 }
