@@ -19,6 +19,7 @@ body {
 a {
   color: #2962ff;
   transition: color 0.3s;
+  text-decoration: none;
 }
 
 a:visited {
@@ -28,8 +29,8 @@ a:visited {
 /* Dark mode styles */
 html.dark-mode,
 html.dark-mode body {
-  background-color: #222222 !important;
-  color: #ffffff !important;
+  background-color: #333333 !important;
+  color: #E0E0E0 !important;
 }
 
 html.dark-mode a {
