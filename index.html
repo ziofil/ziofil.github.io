@@ -21,5 +21,28 @@
         <li><a href="posts/post9.html">The entropy of consciouness</a></li>
         <li><a href="posts/post10.html">Operational qualia</a></li>
     </ol>
+    <script>
+      // Check for saved dark mode preference
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      
+      // Check for saved theme
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        darkModeToggle.textContent = '☀️';
+      }
+
+      // Toggle dark mode
+      darkModeToggle.addEventListener('click', () => {
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('darkMode', 'false');
+          darkModeToggle.textContent = '🌙';
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('darkMode', 'true');
+          darkModeToggle.textContent = '☀️';
+        }
+      });
+    </script>
   </body>
 </html>
