@@ -10,6 +10,7 @@ const posts = [
   "post7.html",
   "post8.html",
   "post9.html",
+  "post10.html",
 ];
 
 // Determine the current index based on the current page URL
