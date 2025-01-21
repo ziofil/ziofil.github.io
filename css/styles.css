@@ -7,32 +7,3 @@ html {
   line-height: 1.75;
   font-size: 1.25em;
 }
-
-/* Add these dark mode styles to your existing CSS */
-:root {
-  --background: #ffffff;
-  --text: #000000;
-}
-
-[data-theme="dark"] {
-  --background: #1a1a1a;
-  --text: #ffffff;
-}
-
-body {
-  background-color: var(--background);
-  color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.dark-mode-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  background: none;
-}

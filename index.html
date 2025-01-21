@@ -3,35 +3,8 @@
   <head>
     <title>ziofil on consciousness</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        
-        // Check for saved theme
-        if (localStorage.getItem('darkMode') === 'true') {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          darkModeToggle.textContent = '☀️';
-        }
-
-        // Toggle dark mode
-        darkModeToggle.addEventListener('click', () => {
-          if (document.documentElement.getAttribute('data-theme') === 'dark') {
-            document.documentElement.removeAttribute('data-theme');
-            localStorage.setItem('darkMode', 'false');
-            darkModeToggle.textContent = '🌙';
-          } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('darkMode', 'true');
-            darkModeToggle.textContent = '☀️';
-          }
-        });
-      });
-    </script>
   </head>
   <body>
-    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-      🌙
-    </button>
     <h1>ziofil on consciousness</h1>
     <p>In all of my life as a physicist, I've been searching for explanations.
     <br>Yet with consciousness I don't even know where to begin.</p>
