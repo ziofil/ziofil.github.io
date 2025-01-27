@@ -97,3 +97,12 @@ body.dark-mode .dark-mode-toggle:focus-visible {
 h1 {
   margin: 0;
 }
+
+/* Add footer styles */
+.footer {
+  font-size: 0.8em;
+  opacity: 0.8;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+}
