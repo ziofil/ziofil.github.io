@@ -19,22 +19,31 @@ if (localStorage.getItem('darkMode') === 'enabled') {
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.documentElement;
-    
-    // Then handle template content
     const content = document.getElementById('content');
     const title = document.title;
     
-    // Add standard header and navigation
-    content.innerHTML = `
-        <div class="header-container">
-            <h1>${title}</h1>
+    // Check if this is a post page (not the index)
+    const isPostPage = window.location.pathname.includes('/posts/');
+    
+    if (isPostPage) {
+        // Add navigation elements only for post pages
+        content.innerHTML = `
+            <div class="header-container">
+                <h1>${title}</h1>
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">&#127769;</button>
+            </div>
+            <button id="home-button">Home</button>
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+            ${content.innerHTML}
+        `;
+    } else {
+        // For index page, just add the dark mode toggle
+        const headerContainer = content.querySelector('.header-container');
+        headerContainer.innerHTML += `
             <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">&#127769;</button>
-        </div>
-        <button id="home-button">Home</button>
-        <button id="prev-button">Previous</button>
-        <button id="next-button">Next</button>
-        ${content.innerHTML}
-    `;
+        `;
+    }
 
     // Dark mode toggle functionality
     const darkModeToggle = document.getElementById('darkModeToggle');
