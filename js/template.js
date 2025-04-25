@@ -10,6 +10,7 @@ const posts = [
     "post8.html",
     "post9.html",
     "post10.html",
+    "post11.html",
 ];
 
 // Immediately restore dark mode before page renders
